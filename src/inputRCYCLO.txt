@@ -1,0 +1,75 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+! This is the input file of rCYCLO code
+!
+! 2014.5.20
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+##Control_variables
+restart=0                 ** 0 new ST;1 reST without rollback;2 re rollback 
+GK_FK_CK=2              ** 0 GK; 1 CKinFH; 2 CKinCH 
+CDW=1                   ** 0 i*delta electron; 1 CDW electron 
+muDtype=0               ** 0 conserv; 1 ZD's; 3 M12 control; 4 equal space 
+mugridtype=1            ** 0 G-L; 1 eqMod; 2 eqChi; 3 M12; 4 eqMod upd 
+output_step=1          ** Diagnose output interval  
+backup_num=1           ** The num of backups
+Const_NL=1.0            ** The coefficient in front of NL term 
+Const_L=1.0             ** The coefficient in front of Linear term
+verify_L=0               ** 1 linear verification; others do not  
+verify_NL=1             ** 1 nonlinear verification; others do not  
+Stopnt=0
+
+
+##Grid_variables
+ntmax=1           ** Num of total time steps
+tstep=0.0001             ** Time step, float!
+kxmax=1.5               ** Max Kx, float!
+kymax=1.5               ** Max Ky, float!
+pmax=11                 ** Max num of Kx grid
+nmax=11                 ** Max num of Ky grid
+mumax=6.0               ** Max mu for G-L grid type
+N_mu=21                  ** Num of mu grid
+N_FT=5                  ** Max harmonic num of CKinFH 
+N_CY=5                  ** Max harmonic num of CKinCH 
+
+
+##Physics_variables
+Omega_star=10.0         ** Ion relative cyclotron freq, float!
+a/Ln=4.0                ** Density gradient, float!
+a/LTi=4.0               ** Ion temperature gradient, float!
+lambda_n=1.0            ** Drift wave inertia, float!
+lambda_0=0.1            ** Zonal flow inertia, float!
+lambda_D=0.1            ** Debye length, float!
+AlphaA=1.0              ** CDW adiabaticity, float!
+delta_1=0.0             ** Electron non-adiabatic, float!
+mu_HK=0.3               ** Damping of high-k modes, float!
+mu_LK=0.05               ** Damping of low-k modes, float!
+F_k_int=1.0            ** Initial value, float!
+Epsilon=0.6             ** aspect ratio,float!
+ratio_TiTe=1.0          ** Ratio of Ti/Te,float!  
+G=1.0                       ** Drift-kinetic coefficient,float!  
+gamIC=0.0
+D_IC=0.0
+
+
+##Trial_variables
+isotropic=0                ** 0 real Physics; 1 delta_k and Omiga* isotro 
+Add_GAM=0               ** 1 add GAM; 0 doesn't 
+F_GAM_int=0.0           ** GAM initial value, float!
+Omiga_GAM=1.0           ** GAM freq
+eta=1.0                        ** Float!
+nu_DW=0.0               ** Const damping to all modes
+nu_ZF=0.0               ** Damping of Zonal modes, float!
+CDWid=0.0               ** CDW i*delta coeff
+Ccos=0
+A0=0.0
+k0=0.3
+Alpha=0.5
+Beta=1.0
+NLi=1.0
+NLe=1.0
+MDmu12=7.1
+kpar=0.167
+uD=0.0
+gamE=0.0
+CHpola=1             **must be integer
+Cnorm=10.0            **must be float
