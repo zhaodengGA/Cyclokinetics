@@ -1,0 +1,118 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+! This is the input file of vuRCYCLO 
+!
+! 2014.8.6
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+##Control_variables
+avenum=4         
+plotstep=1
+sattime=10.0
+Intermit_Plot=0          ;(1 for output intermit&average ON; 0 for OFF )
+overplot_log=0           ;(0 for normal;1 for ylog; 2 for xlog and ylog)
+Az=-60                  ;(70 ky; 330 kx in front)
+Ax=35
+ix1=0                 
+ix2=0            
+Switch_sat=1      ;(1 for ON means the ave_time given by saturated time; 0 for OFF. in colorfulplot)
+quicktrigger=2
+jump=10
+control=0
+
+;; quicktrigger=1 for Chi=conjg(Phi)*G freq spectrum. and output "y.txt"  [Important]!!!
+;; quicktrigger=2; quick output E=0.5(k|phi|)^2 vs time in the file 'y_phisks.txt'.
+;; quicktrigger=3; quick output E=0.5(k|phi|)^2 vs omega in the file 'ykphisqr.txt'.
+;; quicktrigger=4; quick output 'yRatio.txt' for omegaNL/Omegai vs omega_star 
+
+
+##Range_control
+Omega_min=0.01                  (0 for xmin=min(x); >0 for xmin=Omega_min)
+Omega_max=60                    (0 for xmax=max(x); >0 for xmax=Omega_max)
+Phi_logmin=0.0001                 (for 3D log plot of |Phi|)
+Chi_logmin=0.000001               (for 3D log plot of |Chi|)
+OMGpoint=10
+freqPer=0.2
+begintime=105  
+Nk=3
+
+
+##Main_plots_name
+250
+15
+total Chi (GK)
+total D (GK)
+(ne/n0)^2 (GK)
+phi^2 (GK)
+Omega (GK)
+total Chi (CKinFH)
+total D (CKinFH)
+(ne/n0)^2 (CKinFH)
+phi^2 (CKinFH)
+Omega (CKinFH)
+total Chi (CKinCH)
+total D (CKinCH)
+(ne/n0)^2 (CKinCH)
+phi^2 (CKinCH)
+Omega (CKinCH)
+
+
+##More_details_name
+250
+48
+total energy
+total D (GK)
+total entropy
+total Chi (GK)
+Energy(kx)
+Energy(ky)
+Energy(kx)int sat
+Energy(ky)int sat
+D(kx)
+D(ky)
+Chi(kx)
+Chi(ky)
+Chi(kx)int sat
+Chi(ky)int sat
+Energy(k) overplot
+Energy(DW, ZF, GAM) 
+Omega (GK)
+Omega (CKinFH)
+total|Phi| (GK)
+D(kx)int sat
+D(ky)int sat
+|Phi|^2(kx)int sat
+|Phi|^2(ky)int sat
+3D plot of |Phi|
+3D plot of Chi
+3 Case compare
+kxmax saturation
+Cyclo vs Fourier (ky)
+Cyclo vs Fourier(mult FT)
+total D (CKinFH)
+total Chi (CKinFH)
+total Entropy (FK)
+total|Phi| (FK)
+3D plot of D(FK)
+3D plot of Chi(FK)
+3D plot of |Phi|(FK)
+(FK)|Phi|^2 freq spectrum
+(GK)|Phi|^2 freq spectrum
+Omega (CKinCH)
+Chi_mu
+Chi_muft
+F_mu
+F_muft
+F_tot_muft
+Inital Linear
+total |Phi| (CK)
+total Entropy (CK)
+total combine (CK)
+
+##colorful_plot_name
+6
+Exit
+Energy(k)
+Omega_sim
+Omega_the
+Omega_matr
+eddy movie
