@@ -1,3 +1,5 @@
+Cyclokinetics
+
 Cyclokinetics is a first principle model to solve the plasma turbulence transport problem.
 
 Gyrokinetics is widely applied in plasma physics. However, this framework is limited to weak turbulence levels and low drift-wave frequencies because high-frequency gyro-motion is reduced by the gyro-phase averaging. In order to test where gyrokinetics breaks down, Waltz and Zhao developed a new theory, called cyclokinetics [R. E. Waltz and Zhao Deng, Phys. Plasmas 20, 012507 (2013)]. Cyclokinetics dynamically follows the high-frequency ion gyro-motion which is nonlinearly coupled to the low-frequency drift-waves interrupting and suppressing gyro-averaging. Cyclokinetics is valid in the high-frequency (ion cyclotron frequency) regime or for high turbulence levels. The ratio of the cyclokinetic perturbed distribution function over equilibrium distribution function δf/F can approach 1. 
